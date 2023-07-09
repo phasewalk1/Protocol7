@@ -15,10 +15,6 @@ package.path = "/usr/share/lua/5.3/?.lua;" .. package.path
 package.cpath = "/usr/share/lua/5.3/?.so;" .. package.cpath
 
 local fnl = require("fennel").install()
-local plugins = fnl.dofile(os.getenv("HOME") .. "/.config/nvim/gear.fnl")
+local plugins = fnl.dofile(os.getenv("HOME") .. "/.config/nvim/presentday.fnl")
 
 require("lazy").setup(plugins)
-fnl.dofile(os.getenv("HOME") .. "/.config/nvim/bootstrap.fnl")
-
-local masonpath = vim.fn.stdpath("data") .. "/mason/bin/"
-vim.opt.rtp:prepend(masonpath)
