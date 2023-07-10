@@ -1,3 +1,11 @@
+;; Extend the package.path to the 'build/' dir
+(local builds-path (.. (vim.fn.stdpath "config") "/build/?.lua"))
+(set package.path (.. package.path ";" builds-path))
+
+;; Load global settings
+(require :globals)
+
+;; Boostrap lazy.nvim
 (lambda bootstrap-lazy []
   (local lazypath (.. (vim.fn.stdpath "data") "/lazy/lazy.nvim"))
   (if (not (vim.loop.fs_stat lazypath))
@@ -11,13 +19,6 @@
 
 (bootstrap-lazy)
 
-(lambda extend-runtime-path []
-  (local builds-path (.. (vim.fn.stdpath "config") "/build/?.lua"))
-  (set package.path (.. package.path ";" builds-path)))
-
-(extend-runtime-path)
-
-(local globals (require :globals))
-(local lazy (require :lazy))
-(local plugins (require :plugins))
-(lazy.setup plugins)
+;; Register plugins w/ lazy
+(let [lazy (require :lazy)]
+  (lazy.setup (require :plugins)))

@@ -1,5 +1,7 @@
+;; Table for plugins
 (local plug {})
 
+;; Add a plugin to the table
 (lambda push-plugin [identifier opts]
   (if (= opts {})
     (table.insert plug identifier)
@@ -10,6 +12,7 @@
           (tset plugin-spec k v))
         (table.insert plug plugin-spec)))))
 
+;; Define plugins
 (lambda plugins []
     (push-plugin "folke/neoconf.nvim"               {:cmd "Neoconf"})
     (push-plugin "olical/conjure"                   (require :configs.conjure))
@@ -24,5 +27,5 @@
     (push-plugin "folke/which-key.nvim"             {})
   plug)
 
+;; Export the plugins
 (plugins)
-
