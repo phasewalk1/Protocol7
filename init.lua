@@ -7,6 +7,13 @@ local function bootstrap_lazy()
   return (vim.opt.rtp):prepend(lazypath)
 end
 bootstrap_lazy()
+local function extend_runtime_path()
+  local builds_path = (vim.fn.stdpath("config") .. "/build/?.lua")
+  package.path = (package.path .. ";" .. builds_path)
+  return nil
+end
+extend_runtime_path()
+local globals = require("globals")
 local lazy = require("lazy")
-local plugins = require("presentday")
+local plugins = require("plugins")
 return lazy.setup(plugins)

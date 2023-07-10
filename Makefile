@@ -1,16 +1,18 @@
 SOURCES := $(shell find src -name '*.fnl')
-OBJECTS := $(patsubst src/%.fnl, lua/%.lua, $(SOURCES))
+OBJECTS := $(patsubst src/%.fnl, build/%.lua, $(SOURCES))
 
 .PHONY: all clean
 
-all: $(OBJECTS)
-	cp lua/init.lua init.lua
+all: $(OBJECTS) init.lua
 
 clean:
-	rm -rf lua
+	rm -rf build
 
-lua/%.lua: src/%.fnl
+build/%.lua: src/%.fnl
 	mkdir -p $(dir $@)
 	fennel --compile $< > $@
 
+init.lua: build/init.lua
+	cp $< $@
+	rm build/init.lua
 

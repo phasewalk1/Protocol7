@@ -11,6 +11,13 @@
 
 (bootstrap-lazy)
 
+(lambda extend-runtime-path []
+  (local builds-path (.. (vim.fn.stdpath "config") "/build/?.lua"))
+  (set package.path (.. package.path ";" builds-path)))
+
+(extend-runtime-path)
+
+(local globals (require :globals))
 (local lazy (require :lazy))
-(local plugins (require :presentday))
+(local plugins (require :plugins))
 (lazy.setup plugins)
