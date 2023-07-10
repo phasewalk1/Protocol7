@@ -1,5 +1,5 @@
 ## Just a Hack.
-__presentday__ is just a fun weekend project to help me learn [Fennel](https://fennel-lang.org). It's still rooted at _init.lua_, but _.fnl_ configuration files are loaded _before_ [Lazy](https://github.com/folke/lazy.nvim); _init.lua_ evaluates _presentday.fnl_, which returns a table of plugins and their options. Finally, this table gets passed into _lazy setup_ at the end of _init.lua_.
+__presentday__ is just a hack to help me learn [Fennel](https://fennel-lang.org). It's still rooted at _init.lua_, but _.fnl_ configuration files are loaded _before_ [Lazy](https://github.com/folke/lazy.nvim); _init.lua_ evaluates _presentday.fnl_, which returns a table of plugins and their options. Finally, this table gets passed into _lazy setup_ at the end of _init.lua_.
 
 ```Scheme
 (local conjure-opts (require "configs.conjure"))
