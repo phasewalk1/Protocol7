@@ -25,6 +25,7 @@
     (push-plugin "nvim-telescope/telescope.nvim"    (require :configs.telescope))
     (push-plugin "folke/neodev.nvim"                {})
     (push-plugin "folke/which-key.nvim"             {})
+    (push-plugin "ellisonleao/glow.nvim"            {:lazy false :config true :cmd "Glow"})
   plug)
 
 ;; Export the plugins
