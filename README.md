@@ -16,10 +16,10 @@ It's _just a simple config_ that demonstrates a method for embedding _Fennel_ as
 [nyoom-engineering](https://github.com/nyoom-engineering)'s [oxocarbon](https://github.com/nyoom-engineering/oxocarbon.nvim) theme:
 <img src="fig/theme.png">
 
-> [NvChad](https://github.com/nvchad/nvchad)'s Terminal-integration with [NvTerm](https://github.com/NvChad/nvterm).
+> [NvChad](https://github.com/nvchad/nvchad)'s Terminal-integration with [NvTerm](https://github.com/NvChad/nvterm) **is not pre-installed** but can be easily included.
 
 ### Dashboard
-Overides _NvChad_'s start screen with a more powerful interface using [dashboard.nvim](https://github.com/nvimdev/dashboard-nvim).
+Overides _Neovim_'s start screen with a more powerful interface using [dashboard.nvim](https://github.com/nvimdev/dashboard-nvim).
 
 <img src="fig/dash.png"/>
 
@@ -47,9 +47,18 @@ For the following languages,
 - _Python_
 - _TypeScript_
 
+### Interactive Environments
+- [x] _Fennel_
+- [ ] _Clojure_
+- [ ] _Common Lisp_
+- [ ] _Scheme_
+- [ ] _... everything else [conjure](https://github.com/olical/conjure) supports_
+
+Non-checked environments can easily be configured through _conjure_'s configuration file.
+
 <img src="fig/lsp.png">
 
-## How Does _presentday_ Work?
+## How Can I Use _presentday_ as an Example for My Own Config?
 _presentday_ employs the following directory structure and a `Makefile` for building _Fennel_ source code into compiled _Lua_. The `Makefile` will recursively compile all `.fnl` code
 present in the `src/` dir, and output it's correlated `.lua` module in the `build/` dir (e.g. `src/x.fnl` gets compiled to `build/x.lua`).
 
