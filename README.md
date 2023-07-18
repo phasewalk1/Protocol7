@@ -14,7 +14,7 @@ It's _just a simple config_ that demonstrates a method for embedding _Fennel_ as
 
 ### _oxocarbon_
 [nyoom-engineering](https://github.com/nyoom-engineering)'s [oxocarbon](https://github.com/nyoom-engineering/oxocarbon.nvim) theme:
-<img src="doc/theme.png">
+<img src="doc/fig/theme.png">
 
 > [NvChad](https://github.com/nvchad/nvchad)'s Terminal-integration with [NvTerm](https://github.com/NvChad/nvterm) **is not pre-installed** but can be easily included.
 
