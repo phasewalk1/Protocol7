@@ -14,19 +14,19 @@ It's _just a simple config_ that demonstrates a method for embedding _Fennel_ as
 
 ### _oxocarbon_
 [nyoom-engineering](https://github.com/nyoom-engineering)'s [oxocarbon](https://github.com/nyoom-engineering/oxocarbon.nvim) theme:
-<img src="fig/theme.png">
+<img src="doc/theme.png">
 
 > [NvChad](https://github.com/nvchad/nvchad)'s Terminal-integration with [NvTerm](https://github.com/NvChad/nvterm) **is not pre-installed** but can be easily included.
 
 ### Dashboard
 Overides _Neovim_'s start screen with a more powerful interface using [dashboard.nvim](https://github.com/nvimdev/dashboard-nvim).
 
-<img src="fig/dash.png"/>
+<img src="doc/fig/dash.png"/>
 
 ##### Surprise!
 The dashboard has a surprise in there, but I'm going to spoil it anyway:
 
-<img src="fig/surprise.png"/>
+<img src="doc/fig/surprise.png"/>
 
 > The `pl` key maps to `Telescope planets`. 
 
@@ -37,7 +37,7 @@ Of course, there a more useful hotkeys in the dashboard as well.
 - `ff` for `Telescope find_files`,
 - `mg` for `Telescope live_grep`.
 
-<img src="fig/tele.png"/>
+<img src="doc/fig/tele.png"/>
 
 > Using `mg` from the dashboard.
 
@@ -56,7 +56,7 @@ For the following languages,
 
 Non-checked environments can easily be configured through _conjure_'s configuration file.
 
-<img src="fig/lsp.png">
+<img src="doc/fig/lsp.png">
 
 ## How Can I Use _presentday_ as an Example for My Own Config?
 _presentday_ employs the following directory structure and a `Makefile` for building _Fennel_ source code into compiled _Lua_. The `Makefile` will recursively compile all `.fnl` code
