@@ -1,5 +1,5 @@
 ## Just a Hack
-__presentday__ is _just a hack_. It's a simple neovim configuration written in _pure [Fennel](https://fennel-lang.org)_. It is not meant to be a one-size-fits-all, nor was it written as a framework to be expanded upon.
+__Protocol7__ is _just a hack_. It's a simple neovim configuration written in _pure [Fennel](https://fennel-lang.org)_. It is not meant to be a one-size-fits-all, nor was it written as a framework to be expanded upon.
 
 It's _just a simple config_ that demonstrates a method for embedding _Fennel_ as compiled _Lua_ code.
 
@@ -58,8 +58,8 @@ Non-checked environments can easily be configured through _conjure_'s configurat
 
 <img src="doc/fig/lsp.png">
 
-## How Can I Use _presentday_ as an Example for My Own Config?
-_presentday_ employs the following directory structure and a `Makefile` for building _Fennel_ source code into compiled _Lua_. The `Makefile` will recursively compile all `.fnl` code
+## How Can I Use _Protocol7_ as an Example for My Own Config?
+_Protocol7_ employs the following directory structure and a `Makefile` for building _Fennel_ source code into compiled _Lua_. The `Makefile` will recursively compile all `.fnl` code
 present in the `src/` dir, and output it's correlated `.lua` module in the `build/` dir (e.g. `src/x.fnl` gets compiled to `build/x.lua`).
 
 #### Before running `make`
